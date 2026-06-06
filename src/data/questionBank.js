@@ -1,0 +1,42 @@
+export const questionBank = [
+  {
+    id: 1,
+    class: "9",
+    subject: "Computer",
+    chapter: "Introduction",
+    type: "MCQ",
+    question: "What does CPU stand for?",
+  },
+  {
+    id: 2,
+    class: "9",
+    subject: "Computer",
+    chapter: "Introduction",
+    type: "MCQ",
+    question: "Which is a programming language?",
+  },
+  {
+    id: 3,
+    class: "9",
+    subject: "Computer",
+    chapter: "Hardware",
+    type: "Short",
+    question: "Define Hardware.",
+  },
+  {
+    id: 4,
+    class: "10",
+    subject: "Math",
+    chapter: "Algebra",
+    type: "MCQ",
+    question: "Solve x + 2 = 5",
+  },
+  {
+    id: 5,
+    class: "10",
+    subject: "Math",
+    chapter: "Algebra",
+    type: "Long",
+    question: "Explain linear equations.",
+  },
+];
