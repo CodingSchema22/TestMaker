@@ -30,6 +30,8 @@ export default function Login() {
           </button>
 
         </form>
+        localStorage.setItem("token", data.token);
+localStorage.setItem("role", data.user.role);
 
         <div className="mt-4 text-center">
           <Link to="/register">

@@ -1,5 +1,6 @@
 
 import { useRef } from "react";
+import PaperView from "../components/PaperView";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import DashboardLayout from "../layouts/DashboardLayout";
@@ -74,7 +75,7 @@ const printTest = () => {
   return (
     <DashboardLayout>
 <div className="flex gap-4 mb-6">
-
+<PaperView paper={paper} />
   <button
     onClick={downloadPDF}
     className="bg-green-600 text-white px-5 py-3 rounded-lg"
