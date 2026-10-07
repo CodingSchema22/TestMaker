@@ -14,46 +14,88 @@ import Profile from "../pages/Profile";
 import Subjects from "../pages/Subjects";
 import Chapters from "../pages/Chapters";
 
+import ProtectedRoute from "./ProtectedRoute";
+
 export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
 
-        {/* HOME */}
+        {/* ================= HOME ================= */}
 
         <Route path="/" element={<Home />} />
 
-        {/* AUTH */}
+
+        {/* ================= AUTH ================= */}
 
         <Route path="/login" element={<Login />} />
 
         <Route path="/register" element={<Register />} />
 
-        {/* DASHBOARD */}
 
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* ================= PROTECTED ROUTES ================= */}
 
-        <Route path="/profile" element={<Profile />} />
+        <Route element={<ProtectedRoute />}>
 
-        <Route path="/setting" element={<Setting />} />
+          {/* DASHBOARD */}
 
-        {/* TEST CREATION */}
+          <Route
+            path="/dashboard"
+            element={<Dashboard />}
+          />
 
-        <Route path="/create-test" element={<CreateTest />} />
+          <Route
+            path="/profile"
+            element={<Profile />}
+          />
 
-        <Route path="/questions" element={<QuestionBank />} />
+          <Route
+            path="/setting"
+            element={<Setting />}
+          />
 
-        <Route path="/add-question" element={<AddQuestion />} />
 
-        <Route path="/test-preview" element={<TestPreview />} />
+          {/* TEST CREATION */}
 
-        <Route path="/generated-tests" element={<GeneratedTests />} />
+          <Route
+            path="/create-test"
+            element={<CreateTest />}
+          />
 
-        {/* SUBJECTS */}
+          <Route
+            path="/questions"
+            element={<QuestionBank />}
+          />
 
-        <Route path="/subjects" element={<Subjects />} />
+          <Route
+            path="/add-question"
+            element={<AddQuestion />}
+          />
 
-        <Route path="/chapters" element={<Chapters />} />
+          <Route
+            path="/test-preview"
+            element={<TestPreview />}
+          />
+
+          <Route
+            path="/generated-tests"
+            element={<GeneratedTests />}
+          />
+
+
+          {/* SUBJECTS */}
+
+          <Route
+            path="/subjects"
+            element={<Subjects />}
+          />
+
+          <Route
+            path="/chapters"
+            element={<Chapters />}
+          />
+
+        </Route>
 
       </Routes>
     </BrowserRouter>
